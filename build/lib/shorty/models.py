@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from shorty.admins import UrlAdmin
 
 class Url(models.Model):
-    user = models.ForeignKey(User, blank=True, null=True, ondelete=models.CASCADE)
+    user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
     url_field = models.URLField()
     personal = models.BooleanField(default=False)
     personal_slug = models.CharField(max_length=125,blank=True,null=True)

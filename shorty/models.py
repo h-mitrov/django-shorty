@@ -4,7 +4,7 @@ __author__ = 'cingusoft'
 
 
 class Url(models.Model):
-    user = models.ForeignKey(User, blank=True, null=True, ondelete=models.CASCADE)
+    user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
     url_field = models.URLField(max_length=500)
     personal = models.BooleanField(default=False)
     personal_slug = models.CharField(max_length=125, blank=True, null=True)
