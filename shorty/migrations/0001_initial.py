@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ('private_password', models.CharField(max_length=25, null=True, blank=True)),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('user', models.ForeignKey(blank=True, to=settings.AUTH_USER_MODEL, null=True)),
+                ('user', models.ForeignKey(blank=True, to=settings.AUTH_USER_MODEL, null=True, ondelete=models.CASCADE)),
             ],
             options={
             },
