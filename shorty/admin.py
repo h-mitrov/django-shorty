@@ -60,5 +60,8 @@ class UrlAdmin(admin.ModelAdmin):
             return "no"
     is_protected.short_description = "Is Protected"
 
-admin.site.unregister(Url)
+
+if admin.site.is_registered(Url):
+    admin.site.unregister(Url)
+
 admin.site.register(Url, UrlAdmin)
